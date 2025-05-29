@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --orange : #F28E13;
+  --blue:  #0D5B8C;
+  --half-blue : #6B9FBF;
+
+}
+
+.hero-icon-anim{
+    background: linear-gradient(
+      to right,
+      #7953cd 20%,
+      #00affa 30%,
+      #0190cd 70%,
+      #764ada 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+  }
+
+ .her0-btn{
+    color: white;    
+    background: linear-gradient(to right, rgba(22, 22, 22, 0.95), rgba(38, 43, 63, 0.95));
+  }
+  .mobile-nav-bg{
+    color: white;    
+    background: linear-gradient(to right, rgba(22, 22, 22, 0.95), rgba(38, 43, 63, 0.95));
+
+
+  }
+
+  .contact-btn:hover{
+transition: .2s linear;
+    color: white;    
+    background: linear-gradient(to right, rgba(22, 22, 22, 0.95), rgba(38, 43, 63, 0.95));
+    border:  1px solid white;
+ 
+  }
+
+
+  @keyframes textShine {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+
+  .mobile-nav{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 300;
+    transition: .3s linear all;
+  }
+  
+  .mobile-nav-close{
+
+    position: fixed;
+    top: -200%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 300;
+    transition:  .3s linear all;
+  }
+  ::selection{
+    background: var(--orange);
+    color: white;
+  }
+  /* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap"); */
+
+:root {
+  /* Colors */
+  --brand-color: hsl(46, 100%, 50%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  /* Fonts */
+  --font-title: "Montserrat", sans-serif;
+  --font-text: "Lato", sans-serif;
+
+}
+
+
+.card-loading {
+  background-color:#ededed;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, .5) 50%,
+    rgba(255, 255, 255, 0) 60%
+  ) #ededed;
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1s loading ease-in-out infinite;
+}
+
+@keyframes loading {
+  to {
+    background-position-x: -20%;
+  }
+}
+
+/* Contact Form Section */
+input[type="checkbox"] {
+  appearance: none; /* Remove default styles */
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="checkbox"]:checked {
+  background-color: white;
+  position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: orange;
+  font-size: 16px;
+  font-weight: bold;
+}
